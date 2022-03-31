@@ -4,9 +4,10 @@ const {
   getArtist,
   getArtistByID,
 } = require("../controllers/artistsController");
+const { protect } = require("../middleware/authMiddleware");
 
-router.get("/", getArtist);
+router.get("/", protect, getArtist);
 
-router.get("/:id", getArtistByID);
+router.get("/:id", protect, getArtistByID);
 
 module.exports = router;

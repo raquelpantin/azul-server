@@ -1,10 +1,12 @@
 const asyncHandler = require("express-async-handler");
+const Artist = require("../model/artistsModel");
 
 //gets artist info
 //access public
 //route /artist
 const getArtist = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: "get artist info" });
+  const artists = await Artist.find({ user: req.user.id });
+  res.status(200).json(artists);
 });
 
 //gets artist info by id (clicking to view profile)

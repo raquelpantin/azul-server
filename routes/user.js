@@ -1,12 +1,14 @@
-// const express = require("express");
-// const router = express.Router();
-// const {
-//   getArtist,
-//   getArtistByID,
-// } = require("../controllers/artistsController");
+const express = require("express");
+const router = express.Router();
+const {
+  registerUser,
+  loginUser,
+  getUser,
+} = require("../controllers/usersController");
+const { protect } = require("../middleware/authMiddleware");
 
-// router.get("/", getArtist);
+router.post("/signup", registerUser);
+router.post("/login", loginUser);
+router.get("/name", protect, getUser);
 
-// router.get("/:id", getArtistByID);
-
-// module.exports = router;
+module.exports = router;
