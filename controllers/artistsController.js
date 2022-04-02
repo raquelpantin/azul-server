@@ -1,22 +1,37 @@
-const asyncHandler = require("express-async-handler");
+// const asyncHandler = require("express-async-handler");
 const Artist = require("../model/artistsModel");
 
-//gets artist info
-//access public
-//route /artist
-const getArtist = asyncHandler(async (req, res) => {
-  const artists = await Artist.find({ user: req.user.id });
-  res.status(200).json(artists);
-});
+// //gets artist info
+// //access public
+// //route /artist
+// const getArtist = asyncHandler(async (req, res) => {
+//   const artists = await Artist.find({ user: req.user.id });
+//   res.status(200).json(artists);
+// });
 
-//gets artist info by id (clicking to view profile)
-//access private (can only view if logged in)
-//route /artist/:id
-const getArtistByID = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: `view artist profile ${req.params.id}` });
-});
+// //gets artist info by id (clicking to view profile)
+// //access private (can only view if logged in)
+// //route /artist/:id
+// const getArtistByID = asyncHandler(async (req, res) => {
+//   res.status(200).json({ message: `view artist profile ${req.params.id}` });
+// });
+
+// module.exports = {
+//   getArtist,
+//   getArtistByID,
+// };
+
+const getArtists = async (req, res) => {
+  try {
+    const artists = await Artist.find();
+    console.log(artists);
+
+    res.status(200).json(artists);
+  } catch (error) {
+    res.status(404).json("Nope");
+  }
+};
 
 module.exports = {
-  getArtist,
-  getArtistByID,
+  getArtists,
 };

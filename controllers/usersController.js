@@ -85,8 +85,17 @@ const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 };
 
+//logout user
+const logoutUser = asyncHandler(async (req, res) => {
+  res.clearCookie("jwt");
+  return res.json({
+    message: "Logout Successful",
+  });
+});
+
 module.exports = {
   registerUser,
   loginUser,
   getUser,
+  logoutUser,
 };
