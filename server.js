@@ -11,6 +11,7 @@ const port = process.env.PORT || 8000;
 
 const app = express();
 
+//connect to mongodb
 connectDB();
 
 //middleware
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
+//routes
 app.use("/artist", artistRoutes);
 app.use("/user", userRoutes);
 
