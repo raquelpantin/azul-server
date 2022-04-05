@@ -4,7 +4,6 @@ const {
   getArtists,
   getArtistByID,
 } = require("../controllers/artistsController");
-const { protect } = require("../middleware/authMiddleware");
 
 router.get("/:id", getArtistByID);
 

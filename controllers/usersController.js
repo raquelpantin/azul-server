@@ -67,36 +67,12 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 });
 
-//get user data
-//GET/users/login/name
-// access PRIVATE
-const getUser = asyncHandler(async (req, res) => {
-  const { _id, firstName, lastName, email } = await User.findById(req.user.id);
-
-  res.status(200).json({
-    id: _id,
-    firstName,
-    lastName,
-    email,
-  });
-});
-
 //Generate token
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 };
 
-//logout user
-const logoutUser = asyncHandler(async (req, res) => {
-  res.clearCookie("jwt");
-  return res.json({
-    message: "Logout Successful",
-  });
-});
-
 module.exports = {
   registerUser,
   loginUser,
-  getUser,
-  logoutUser,
 };

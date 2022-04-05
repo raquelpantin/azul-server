@@ -10,7 +10,7 @@ const artistSchema = mongoose.Schema({
   priceRange: String,
   skills: [String],
   avatar: String,
-  portfolio: { String },
+  portfolio: [String],
 });
 
 module.exports = mongoose.model("Artist", artistSchema);

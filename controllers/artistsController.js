@@ -7,7 +7,7 @@ const getArtists = async (req, res) => {
 
     res.status(200).json(artists);
   } catch (error) {
-    res.status(404).json("Not Found");
+    res.status(404).json("Results Not Found");
   }
 };
 
@@ -17,7 +17,7 @@ const getArtistByID = async (req, res) => {
     console.log(artistsByID);
     res.status(200).json(artistsByID);
   } catch (error) {
-    res.status(404).json("Nope");
+    res.status(404).json("Artist Not Found");
   }
 };
 
