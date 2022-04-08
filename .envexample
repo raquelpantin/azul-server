@@ -1,0 +1,6 @@
+NODE_ENV = development
+PORT = 7070
+
+MONGO_URI = mongodb+srv://YOURMONGOURI
+
+JWT_SECRET = 1234rock
