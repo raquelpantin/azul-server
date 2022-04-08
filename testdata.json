@@ -337,6 +337,23 @@
             {"image2": "https://images.unsplash.com/photo-1623419975008-bc48aec756d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"},
             {"image3": "https://images.unsplash.com/photo-1536759078151-61c8b6f156a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"}
 		]
+	},
+	{
+		"firstName": "Tobias",
+		"lastName": "Allison",
+		"email": "ut.ipsum.ac@gmail.com",
+		"city": "Athens",
+		"bio": "Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum, dui quis accumsan convallis, ante lectus convallis",
+		"state": "Oklahoma",
+		"pricRange": "$$",
+		"skills": ["sculpting", "colored pencil", "photography", "mosaics", "glass art", "jewelry"],
+		"avatar": "https://randomuser.me/api/portraits/men/6.jpg",
+		"portfolio": [
+			{"image1": "https://images.unsplash.com/photo-1588007375169-926788bdab2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"},
+            {"image2": "https://images.unsplash.com/photo-1571053224590-f1506dc7bf2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=679&q=80"},
+            {"image3": "https://images.unsplash.com/photo-1416339657728-db4f81e78693?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"}
+        ]
+        
 	}
 ]
 
